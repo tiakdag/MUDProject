@@ -1,4 +1,6 @@
 /*import java.util.*;
+ * 
+ * test
 
 public class Boot {
 	
@@ -13,7 +15,16 @@ public class Boot {
 		
 		Player player1 = new player();
 		
+		g.addExit(e1);
+		
+		p.addItem(sub);
+		p.addItem(onion);
+		p.addItem(snack);
+		
 		UI ui - new UI(new Scanner (system.in), p);
+		
+		system.out.println(p.addItem(sub));
+		p.getItem(sub);
 		
 	}
 }

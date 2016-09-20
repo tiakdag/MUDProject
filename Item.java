@@ -18,12 +18,8 @@ public class Item {
 	public String getName(){
 		return name;
 	}
-	/**
-	 * pickUpItem takes the item and will add it to the inventory.
-	 * 
-	 * @return a message saying the player has picked up a item 
-	 */
-
+	
 	
 	private String name;
 }
+

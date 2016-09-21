@@ -6,11 +6,11 @@ public class Inventory {
 	 */
 	
 	//  List<String> list = new ArrayList<String>();
-	public Inventory(String x){
-	ArrayList Item = new ArrayList(10);
-	ArrayList Room = new ArrayList(10);
-	
-	
+	public Inventory(){
+		ArrayList Item = new ArrayList(10);
+		ArrayList Room = new ArrayList(10);
+		ArrayList PlayerInventory = new ArrayList(10);
+		ArrayList MOB = new ArrayList(10);
 	}
 	
 	

@@ -19,6 +19,11 @@ public class Item {
 		return name;
 	}
 	
+	public Item getItem(String x){
+		if (x == name){
+			return x;
+		}else return null;
+	}
 	
 	private String name;
 }

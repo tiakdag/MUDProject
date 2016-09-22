@@ -29,5 +29,28 @@ public class Room {
 		
 	}
 	private String name;
+	
+	
+	public static Map newInstance() {
+        Map rooms = new Map();
+        rooms.putRoom(0, 0, Room.Instance());
+        rooms.putRoom(0, 1, Room.Instance());
+        rooms.putRoom(1, 0, Room.Instance());
+        rooms.currentRoom = rooms.getRoom(0, 0);
+        return rooms;
+    }
+}
+
+String description = null;
+if (n == 0) {
+	description = "Swamp";
+} else if (n == 1) {
+	description = "";
+} else if (n == 2) {
+	description = "";
+} else if (n == 3) {
+	description = "";
+} else {
+	return null;
 }
 

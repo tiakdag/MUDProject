@@ -44,13 +44,17 @@ public class Room {
 String description = null;
 if (n == 0) {
 	description = "Swamp";
-} else if (n == 1) {
-	description = "";
-} else if (n == 2) {
-	description = "";
-} else if (n == 3) {
-	description = "";
-} else {
+} 
+	else if (n == 1) {
+		description = "";
+} 
+		else if (n == 2) {
+			description = "";
+} 
+			else if (n == 3) {
+				description = "";
+} 
+				else {
 	return null;
 }
 

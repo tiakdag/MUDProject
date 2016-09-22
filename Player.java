@@ -4,13 +4,18 @@
  *
  */
 public class Player {
+	private String name;
+	private Room room;
 	/**
 	 * Constructs a player object that has a name and 
 	 * @param x the name of the player
 	 */
-	public Player(String x) {
-		name = x;
+	public Player() {
+		name = "Scooby";
 		
+	}
+	public Player(String x){
+		name = x;
 	}
 	/**
 	 * getName() gets the name of the player and returns that name
@@ -19,10 +24,15 @@ public class Player {
 	public String getName() {
 		return name;
 	}
-	
-	/* public String location() {
-	 * return the current location of the player
+	/**
+	 * location() gets the name of the room that the player is currently in
+	 * @return the name of the room
 	 */
+	 public String location() {
+	  return room.getName();
+	 }
+	 // return the current location of the player
+	 
 	
 	/*public Boolean pickUpItem(String x){
 		this method allows player to add an item to their inventory
@@ -49,5 +59,6 @@ public class Player {
 	 *  else (player stays)
 	 */
 	 
-	private String name;
+	
 }
+

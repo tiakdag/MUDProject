@@ -59,6 +59,40 @@ public class Player {
 	 *  else (player stays)
 	 */
 	 
+	 public void moveRooms(){
+		 
+		 
+	        boolean northExit = roomExists(currentX, currentY+1);
+	        boolean southExit = roomExists(currentX, currentY-1);
+	        boolean eastExit = roomExists(currentX+1, currentY);
+	        boolean westExit = roomExists(currentX-1, currentY);
+	        
+	        System.out.print("Exit options are:");
+	        
+	        if (northPossible) {System.out.print(" North ");
+	            }
+	        if (eastPossible) {System.out.print(" East ");
+	            }
+	        if (southPossible) {System.out.print(" South ");
+	            }
+	        if (westPossible) {System.out.print(" West ");
+	            }
+	        System.out.print("?");
+	        
+	        input playerInput = new input(new Input(System.in));
+	        String direction = playerInput.readInput();
+	        if (direction.equals("North") && northExit) {
+	            currentY++;
+	        } else if (direction.equals("south") && southExit) {
+	            currentY--;
+	        } else if (direction.equals("East") && eastExit) {
+	            currentX++;
+	        } else if (direction.equals("West") && westExit) {
+	            currentX--;
+	        }
+	        room = getRoom(currentX, currentY);
+	    }
+	 
 	
 }
 

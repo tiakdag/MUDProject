@@ -8,17 +8,17 @@ public class Inventory {
 	
 	//  List<String> list = new ArrayList<String>();
 	public Inventory(Item[] x ){  //or MOB
- 		ArrayList myInventory = new ArrayList  (40);
-	
+		ArrayList myInventory = new ArrayList  (40);
+		
 		for (int i=0; i <= x.length; i++){
 			myInventory.add(x[i]);
 		}
 	}
 	public Item getItem(String x){
-		if (this.contains(x)){
-		this.remove(x);
-		return ()
-		}else return null;
+		for(Item i : this){
+		x.equalsIgnoreCase(i.getName());
+		this.remove(i);
+		return i;
+	} return null;
 	}
-	
 }

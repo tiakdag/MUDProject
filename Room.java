@@ -6,7 +6,7 @@ public class Room {
  * @param x the name of the room that will be entered.
  * @param items is the list of items in the inventory of the room.
  */
-	public Room(String x,Item items){
+	public Room(String x,Item[] items){
 		Inventory I = new Inventory(items);
 		name = x;
 	}
@@ -25,7 +25,7 @@ public class Room {
 	 * @return Item object if the the desired item is in the room and accessible.
 	 */
 	public Item getItem(String item_query){
-		
+		return I.getItem(item_query);
 		
 	}
 	private String name;

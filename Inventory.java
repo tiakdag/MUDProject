@@ -10,8 +10,8 @@ public class Inventory {
 	public Inventory(Item[] x ){  //or MOB
 		ArrayList myInventory = new ArrayList  (40);
 		
-		for (int i=0; i <= x.length; i++){
-			myInventory.add(x[i]);
+		for (int n=0; n <= x.length; n++){
+			myInventory.add(x[n]);
 		}
 	}
 	public Item getItem(String x){

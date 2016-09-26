@@ -4,13 +4,14 @@ import java.util.*;
 public class Boot {
 	
 	private Boot() {
-		Room kitchen = new room("kitchen");
-		Room diningRoom = new room("dining room");
-		Room masterBedRoom = new room("master bed room");
-		
 		Item sub = new item("Johnny Jim's sub");
 		Item onion = new item("Onion");
 		Item snack = new item("Scooby Snack");
+		
+		
+		Room kitchen = new room("kitchen", [sub]);
+		Room diningRoom = new room("dining room", [onion]);
+		Room masterBedRoom = new room("master bed room", [snack]);
 		
 		Player player1 = new player();
 		

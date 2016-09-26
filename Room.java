@@ -29,7 +29,7 @@ public class Room {
 		
 	}
 	
-	public null addItem(Item item){
+	public void addItem(Item item){
 		I.add(item);
 	}
 	private String name;

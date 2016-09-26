@@ -28,7 +28,7 @@ public class Inventory {
 			return i;
 		} return null;
 		}
-	public null add(Item item){
+	public void add(Item item){
 		myInventory.add(item);
 	}
 }

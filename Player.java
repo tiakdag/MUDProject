@@ -37,7 +37,7 @@ public class Player {
 		to inventory of the player.
 	 * 
 	 */
-	public Boolean pickUpItem(String x){
+	public boolean pickUpItem(String x){
 		Item itemCheck = room.getItem(x);
 		if(itemCheck == null){
 			return false;
@@ -49,7 +49,7 @@ public class Player {
 		}
 	}
 	
-	public Boolean dropItem(String x){
+	public boolean dropItem(String x){
 		Item itemCheck = inventory.getItemName(x);
 		if(itemCheck == null){
 			return false;

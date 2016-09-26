@@ -50,8 +50,16 @@ public class Player {
 	}
 	
 	public Boolean dropItem(String x){
-		
-		
+		Item itemCheck = inventory.getItemName(x);
+		if(itemCheck == null){
+			return false;
+		}
+		else{
+			inventory.remove(itemCheck);// removes item from player inventory
+			room.addItem(itemCheck); //adds item to room inventory
+			system.out.println("This is a test line: You have tried to drop " + itemCheck);
+			return true;
+		}
 		
 	}
 	

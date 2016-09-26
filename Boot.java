@@ -15,13 +15,15 @@ public class Boot {
 		
 		Player player1 = new player();
 		
-		g.addExit(e1);
+		g.addExit(e1); //This is not right (nothing called 'g')
 		
+		/* --I don't think we need this because start items are fed into constructor-- Ben
 		p.addItem(sub);
 		p.addItem(onion);
 		p.addItem(snack);
+		*/
 		
-		UI ui - new UI(new Scanner (system.in), p);
+		UI ui = new UI(new Scanner (system.in), p);
 		
 		system.out.println(p.addItem(sub));
 		p.getItem(sub);

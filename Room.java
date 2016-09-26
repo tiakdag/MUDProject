@@ -28,6 +28,10 @@ public class Room {
 		return I.getItem(item_query);
 		
 	}
+	
+	public null addItem(Item item){
+		I.add(item);
+	}
 	private String name;
 	
 	

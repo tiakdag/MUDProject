@@ -21,4 +21,12 @@ public class Inventory {
 		return i;
 	} return null;
 	}
+	
+	public Item getItemName(String x){
+		for(Item i : this){
+			x.equalsIgnoreCase(i.getName());
+			return i;
+		} return null;
+		}
+	}
 }

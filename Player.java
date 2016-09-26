@@ -7,16 +7,13 @@ public class Player {
 	private String name;
 	private Room room;
 	/**
-	 * Constructs a player object that has a name and 
-	 * @param x the name of the player
+	 * Player() Constructs a player object that has a name and empty inventory
+	 * 
 	 */
 	public Player() {
 		name = "Scooby";
-		
-	}
-	public Player(String x){
-		name = x;
-	}
+		Inventory inventory = new Inventory();
+	
 	/**
 	 * getName() gets the name of the player and returns that name
 	 * @return the name of the player
@@ -31,17 +28,32 @@ public class Player {
 	 public String location() {
 	  return room.getName();
 	 }
-	 // return the current location of the player
 	 
-	
-	/*public Boolean pickUpItem(String x){
-		this method allows player to add an item to their inventory
+	/*
+	 * this method allows player to add an item to their inventory
 		User enters pick up item.
 		player calls on the inventory of the room to see if item is in room.
 		If item is in room, then remove the item from inventory of room 
 		to inventory of the player.
+	 * 
+	 */
+	public Boolean pickUpItem(String x){
+		Item itemCheck = room.getItem(x);
+		if(itemCheck == null){
+			return false;
+		}
+		else{
+			inventory.add(itemCheck);
+			system.out.println("This is a test line: You have tried to pick up " + itemCheck);
+			return true;
+		}
+	}
+	
+	public Boolean dropItem(String x){
 		
-	}*/
+		
+		
+	}
 	
 	
 	/*public Boolean moveRooms(String x) {

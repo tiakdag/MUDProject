@@ -29,6 +29,10 @@ public class Player {
 	  return room.getName();
 	 }
 	 
+	 public void setLocation(Room currentRoom){
+		 this.room=currentRoom;
+	 }
+	 
 	/*
 	 * this method allows player to add an item to their inventory
 		User enters pick up item.

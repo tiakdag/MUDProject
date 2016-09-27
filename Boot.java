@@ -1,4 +1,5 @@
 import java.util.*;
+import java.Math.*;
 
 
 public class Boot {
@@ -14,6 +15,19 @@ public class Boot {
 		Room masterBedRoom = new room("master bed room", [snack]);
 		
 		Player player1 = new player();
+		
+		int startLoc = (int)((double)Math.rand()*10)%3;
+		
+		switch(startLoc){
+			case 1: player1.setLocation(kitchen);
+					break;
+			case 2: player1.setLocation(diningRoom);
+					break;
+			case 3: player1.setLocation(masterBedRoom);
+					break;
+			default: player1.setLocation(kitchen);
+					break;
+		}
 		
 		g.addExit(e1); //This is not right (nothing called 'g')
 		

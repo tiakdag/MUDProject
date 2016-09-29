@@ -2,6 +2,7 @@ import java.util.*;
 
 public class Room {
 
+	private String name;
 	private String description;
 	ArrayList<Exit>exitList = new ArrayList<Exit> (5);
 	private Inventory I = new Inventory(null);
@@ -46,17 +47,7 @@ public class Room {
 	public void addItem(Item item){
 		I.add(item);
 	}
-	private String name;
 	
-	
-	/*public static Map newInstance() {
-        Map rooms = new Map();
-        rooms.putRoom(0, 0, Room.Instance());
-        rooms.putRoom(0, 1, Room.Instance());
-        rooms.putRoom(1, 0, Room.Instance());
-        rooms.currentRoom = rooms.getRoom(0, 0);
-        return rooms;
-    } */
 
 /**
  * creates a description of the room 
@@ -72,7 +63,28 @@ public String description(){
 	return m;
 }
 
+/**
+ * isMoveValid checks through rooms exits to see if passed in string matches name of any of the exit options
+ * @param s door name passed in from user
+ * @return room object of next room (the one the user wants to go to)
+ */
+public Room isMoveValid(String s){
+	for(Exit e : exitList){
+		s.equalsIgnoreCase(e.getName());
+		return e.getNextRoom();
+	} return null;
+}
 
+	/*public static Map newInstance() {
+        Map rooms = new Map();
+        rooms.putRoom(0, 0, Room.Instance());
+        rooms.putRoom(0, 1, Room.Instance());
+        rooms.putRoom(1, 0, Room.Instance());
+        rooms.currentRoom = rooms.getRoom(0, 0);
+        return rooms;
+    } */
+	
+	
 /*String description = null;
 if (n == 0) {
 	description = "Swamp";

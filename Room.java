@@ -1,14 +1,18 @@
 import java.util.*;
 
 public class Room {
-/**
+
+	private String description;
+	/**
  * constructs a room object that has a name and can be entered
  * @param x the name of the room that will be entered.
  * @param items is the list of items in the inventory of the room.
  */
-	public Room(String x,Item[] items){
+	public Room(String x,Item[] items,String y){
 		Inventory I = new Inventory(items);
 		name = x;
+		description = y;
+		ArrayList<Exit>exitList = new ArrayList<Exit> (5);
 	}
 	/**
 	 * getRoom() gets the name of the room
@@ -16,6 +20,10 @@ public class Room {
 	 */
 	public String getRoom() {
 		return name;
+	}
+	//Room if it can’t find an exit return null -> loop to go through the exits
+	public addExit(Exit e){
+		exitList.add(e);
 	}
 	
 	/**
@@ -28,24 +36,34 @@ public class Room {
 		return I.getItem(item_query);
 		
 	}
-	
+	/**
+	 * addItem(Item) adds an item to the inventory
+	 * @param item adds item to the inventory
+	 */
 	public void addItem(Item item){
 		I.add(item);
 	}
 	private String name;
 	
 	
-	public static Map newInstance() {
+	/*public static Map newInstance() {
         Map rooms = new Map();
         rooms.putRoom(0, 0, Room.Instance());
         rooms.putRoom(0, 1, Room.Instance());
         rooms.putRoom(1, 0, Room.Instance());
         rooms.currentRoom = rooms.getRoom(0, 0);
         return rooms;
-    }
+    } */
+}
+/**
+ * creates a description of the room 
+ */
+public String description(){
+	return description;
 }
 
-String description = null;
+
+/*String description = null;
 if (n == 0) {
 	description = "Swamp";
 } 
@@ -59,6 +77,7 @@ if (n == 0) {
 				description = "";
 } 
 				else {
-	return null;
-}
+	return null;*/
+} 
+
 

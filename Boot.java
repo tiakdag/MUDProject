@@ -18,15 +18,14 @@ public class Boot {
 		
 		int startLoc = (int)((double)Math.rand()*10)%3;
 		
-		switch(startLoc){
-			case 1: player1.setLocation(kitchen);
-					break;
-			case 2: player1.setLocation(diningRoom);
-					break;
-			case 3: player1.setLocation(masterBedRoom);
-					break;
-			default: player1.setLocation(kitchen);
-					break;
+		if (startLoc =1){
+			 player1.setLocation(kitchen);
+		}else if (startLoc = 2){
+			 player1.setLocation(diningRoom);
+		}else if (startLoc = 3) {
+			 player1.setLocation(masterBedRoom);
+		}else  player1.setLocation(kitchen);
+					
 		}
 		
 		g.addExit(e1); //This is not right (nothing called 'g')

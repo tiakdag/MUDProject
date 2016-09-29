@@ -18,7 +18,12 @@ public class Item {
 	public String getName(){
 		return name;
 	}
-	
+	/**
+	 * getItem checks to see if the name of the object we are getting
+	 * matches and if it does return that name
+	 * @param  x
+	 * @return the item 
+	 */
 	public Item getItem(String x){
 		if (x == name){
 			return x;

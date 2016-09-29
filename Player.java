@@ -28,19 +28,21 @@ public class Player {
 	 public String location() {
 	  return room.getName();
 	 }
-	 
+	 /**
+	  * set the location of the player
+	  * @param the new location of the player
+	  */
 	 public void setLocation(Room currentRoom){
 		 this.room=currentRoom;
 	 }
-	 
-	/*
-	 * this method allows player to add an item to their inventory
-		User enters pick up item.
-		player calls on the inventory of the room to see if item is in room.
+	 /**
+	  * boolean pickUpItem allows a player to pick up an item player calls on the inventory of the room to see if item is in room.
 		If item is in room, then remove the item from inventory of room 
 		to inventory of the player.
-	 * 
-	 */
+	  * @param String x
+	  * @return true if the item is in the inventory of the room
+	  */
+	
 	public boolean pickUpItem(String x){
 		Item itemCheck = room.getItem(x);
 		if(itemCheck == null){
@@ -52,7 +54,12 @@ public class Player {
 			return true;
 		}
 	}
-	
+	/**
+	 * Remove an item from the player's inventory
+	 * @param String x
+	 * @return false if there is no item in the player's inventory
+	 * true if player has an item in their inventory
+	 */
 	public boolean dropItem(String x){
 		Item itemCheck = inventory.getItemName(x);
 		if(itemCheck == null){
@@ -68,22 +75,9 @@ public class Player {
 	}
 	
 	
-	/*public Boolean moveRooms(String x) {
-	 * this method moves players from one room to the next
-	 * if player enters a correct direction then player moves current location -> new location
-	 * if player enters wrong direction player stays 
-	 *  if (player enters up) {
-	 *  then (changeRoom up)
-	 *  else if (player enters down) 
-	 *  then (changeRoom down)
-	 *  else if (player enters right)
-	 *  then (changeRoom right)
-	 *  else if (player enters left)
-	 *  then (changeRoom left)
-	 *  else (player stays)
-	 */
-	 
-	 public void moveRooms(){
+	
+	 /*
+	public void moveRooms(){
 		 
 		 
 	        boolean northExit = roomExists(currentX, currentY+1);
@@ -115,7 +109,7 @@ public class Player {
 	            currentX--;
 	        }
 	        room = getRoom(currentX, currentY);
-	    }
+	    }  */
 	 
 	
 }

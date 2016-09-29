@@ -18,9 +18,10 @@ public class Inventory {
  */
 	public Item getItem(String x){
 		for(Item i : myInventory){
-		x.equalsIgnoreCase(i.getName());
+		if(x.equalsIgnoreCase(i.getName())){
 		myInventory.remove(i);
 		return i;
+	} 
 	} return null;
 	}
 	/**
@@ -30,10 +31,11 @@ public class Inventory {
 	 */
 	public Item getItemName(String x){
 		for(Item i : myInventory){
-			x.equalsIgnoreCase(i.getName());
+			if(x.equalsIgnoreCase(i.getName())){
 			return i;
-		} return null;
-		}
+		} 
+		}return null;
+	}
 	/**
 	 * add, puts an item into an array of items
 	 * @param item
@@ -48,6 +50,10 @@ public class Inventory {
 	public void remove(Item item){
 		myInventory.remove(item);
 	}
+	/**
+	 * returnItemList goes through the array list of items
+	 * @return the name of all items in the list
+	 */
 	public String returnItemList(){
 		String items = "";
 		for (int i = 0; i < myInventory.size() ; i++){

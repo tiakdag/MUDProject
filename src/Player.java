@@ -89,6 +89,10 @@ public class Player {
 			return true;
 		}
 	}
+	/**
+	 * getDescription gets a description of the room
+	 * @return the string description of room
+	 */
 	public String getDescription() {
 		return room.description();
 	}

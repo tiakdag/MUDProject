@@ -7,7 +7,7 @@ public class UI {
 	
   /**
    * UI is a class that constructs a scanner that starts the game 
-   * @param p
+   * @param p player
    */
 	public UI(Player p){
 	  System.out.println("Your eyes slide open and a musky stench fills your lungs.");

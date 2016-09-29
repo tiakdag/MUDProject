@@ -50,9 +50,10 @@ public class Boot {
 		hall.addExit(e7);
 		hall.addExit(e8);
 		
-		
+		// create player
 		Player player1 = new Player();
 		
+		// put player into a random room
 		int startLoc = (int)((double)Math.random()*10)%3;
 		
 		if (startLoc ==1){
@@ -66,7 +67,7 @@ public class Boot {
 		}else  player1.setLocation(hall);
 					
 		
-		
+		// create User interface
 		UI ui = new UI(player1);
 		
 		

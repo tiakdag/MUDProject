@@ -9,7 +9,7 @@ public class Room {
 	/**
  * constructs a room object that has a name and can be entered
  * @param x the name of the room that will be entered.
- * @param items is the list of items in the inventory of the room.
+ * @param y is the short description of the room
  */
 	public Room(String x,String y){
 		
@@ -19,19 +19,22 @@ public class Room {
 	}
 	/**
 	 * getRoom() gets the name of the room
-	 * @return the name of the room
+	 * @return  name of the room
 	 */
 	public String getRoom() {
 		return name;
 	}
-	//Room if it can’t find an exit return null -> loop to go through the exits
+	/**
+	 * addExit adds an exit to a room
+	 * @param e, exit to be added
+	 */
 	public void addExit(Exit e){
 		exitList.add(e);
 	}
 	
 	
 	/**
-	 * Takes in player query and sends back an Item if it is in the room or a null response if
+	 * Takes in player query and sends back an Item if the item is in the room or a null response if
 	 * the item is not there.
 	 * @param item_query is a string from the UI to the Player Class to room that represents the item the player wishes to pick up.
 	 * @return Item object if the the desired item is in the room and accessible.
@@ -48,9 +51,9 @@ public class Room {
 		I.add(item);
 	}
 	
-
 /**
- * creates a description of the room 
+ * description gives a description of the rooms
+ * @return String that is the description
  */
 	
 public String description(){
@@ -71,10 +74,11 @@ public String description(){
  */
 public Room isMoveValid(String s){
 	for(Exit e : exitList){
-		s.equalsIgnoreCase(e.getName());
+		if(s.equalsIgnoreCase(e.getName())){
 		return e.getNextRoom();
-	} return null;
-}
+	} 
+	}return null;
+	}
 
 } 
 

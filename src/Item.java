@@ -23,9 +23,8 @@ public class Item {
 	 * 
 	 * @return a message saying the player has picked up a item 
 	 */
-	public String pickUpItem(){
-		return "You have picked up " + name;
-	}
+	
+
 	
 	private String name;
 }

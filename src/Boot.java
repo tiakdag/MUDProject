@@ -21,17 +21,17 @@ public class Boot {
 		//EXIT CREATION
 		
 		//Kitchen's Exits
-		Exit e1 = new Exit(diningRoom, "DoubleDoor");
-		Exit e2 = new Exit(hall, "ServantsPassageway");
+		Exit e1 = new Exit(diningRoom, "DoubleDoorToDiningRoom");
+		Exit e2 = new Exit(hall, "ServantsPassagewayToHall");
 		//Dinning Room's Exits
-		Exit e3 = new Exit(kitchen , "DoubleDoor");
-		Exit e4 = new Exit(study, "OrnateArchway");
+		Exit e3 = new Exit(kitchen , "DoubleDoorToKitchen");
+		Exit e4 = new Exit(study, "OrnateArchwayToStudy");
 		//Study's Exits
-		Exit e5 = new Exit(diningRoom, "OrnateArchway");
-		Exit e6 = new Exit(hall, "BigOleDoor");
+		Exit e5 = new Exit(diningRoom, "OrnateArchwayToDiningRoom");
+		Exit e6 = new Exit(hall, "BigOleDoorToHall");
 		//Hall's Exits
-		Exit e7 = new Exit(study, "BigOleDoor");
-		Exit e8 = new Exit(kitchen, "ServantsPassageway");
+		Exit e7 = new Exit(study, "BigOleDoorToStudy");
+		Exit e8 = new Exit(kitchen, "ServantsPassagewayToKitchen");
 		
 		
 		// filling rooms 
@@ -67,17 +67,7 @@ public class Boot {
 					
 		
 		
-		
-		
-		/* --I don't think we need this because start items are fed into constructor-- Ben
-		p.addItem(sub);
-		p.addItem(onion);
-		p.addItem(snack);
-		*/
-		
 		UI ui = new UI(player1);
-		
-		
 		
 		
 	}

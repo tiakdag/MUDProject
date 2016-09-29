@@ -4,7 +4,7 @@ public class Room {
 
 	private String name;
 	private String description;
-	ArrayList<Exit>exitList = new ArrayList<Exit> (5);
+	ArrayList<Exit>exitList = new ArrayList<Exit> (10);
 	private Inventory I = new Inventory();
 	/**
  * constructs a room object that has a name and can be entered
@@ -76,30 +76,5 @@ public Room isMoveValid(String s){
 	} return null;
 }
 
-	/*public static Map newInstance() {
-        Map rooms = new Map();
-        rooms.putRoom(0, 0, Room.Instance());
-        rooms.putRoom(0, 1, Room.Instance());
-        rooms.putRoom(1, 0, Room.Instance());
-        rooms.currentRoom = rooms.getRoom(0, 0);
-        return rooms;
-    } */
-	
-	
-/*String description = null;
-if (n == 0) {
-	description = "Swamp";
-} 
-	else if (n == 1) {
-		description = "";
-} 
-		else if (n == 2) {
-			description = "";
-} 
-			else if (n == 3) {
-				description = "";
-} 
-				else {
-	return null;*/
 } 
 

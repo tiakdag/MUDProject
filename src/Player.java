@@ -75,13 +75,19 @@ public class Player {
 		}
 		
 	}
+	/**
+	 * moveRooms Takes in a door name (string) and asks the room if that is a valid exit. 
+	 * if the exit is valid, then the current room will send back the next room and change the players location
+	 * @param s is the name of the door the player wishes to 'open' / go through
+	 * @return true if player went to next room, false if next room doesnt exist
+	 */
 	public boolean moveRooms(String s){
-		Exit exitCheck = room.isMoveValid();
-		if(exitCheck == null){
+		Room nextRoom = room.isMoveValid();
+		if(nextRoom == null){
 			return false;
 		}
 		else{
-			setLocation(exitCheck);
+			setLocation(nextRoom);
 			return true;
 		}
 	}

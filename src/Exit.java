@@ -27,12 +27,10 @@ public class Exit {
 		
 	}
 	/**
-	 * exitRoom creates an exit for the room 
-	 * @param Room r
-	 * @param String s
-	 * compare the room we want to go to and the string we pass in for the name of the room
+	 * getNextRoom creates an exit for the room 
+	 * @return the Room object the the exit links too (ie nextRoom)
 	 */
-	public Room nextRoom(){
+	public Room getNextRoom(){
 		return nextRoom;
 	}
 	/**

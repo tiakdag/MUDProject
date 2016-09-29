@@ -4,7 +4,9 @@
  *
  */
 public class Item {
-/**
+public Item y;
+private String name;
+	/**
  * Constructs a Item object that has a name and can be picked up.
  * @param x the name of the object that will be picked up
  */
@@ -18,19 +20,20 @@ public class Item {
 	public String getName(){
 		return name;
 	}
+	
 	/**
 	 * getItem checks to see if the name of the object we are getting
 	 * matches and if it does return that name
 	 * @param  x
 	 * @return the item 
 	 */
-	public Item getItem(String x){
+	public String getItem(String x){
 		if (x == name){
-			return x();
+			return x;
 		}else return null;
 	}
 	
-	private String name;
+	
 }
 
 

@@ -14,7 +14,7 @@ public class Player {
 	 */
 	public Player() {
 		name = "Scooby";
-		Inventory inventory = new Inventory();
+		
 	}
 	/**
 	 * getName() gets the name of the player and returns that name

@@ -26,7 +26,14 @@ public class UI {
 		  }
 		  else if (cmd.equalsIgnoreCase("move")){
 			  String moveRequest = reader.next();
-			  //TODO move method
+			  boolean bool = p.moveRooms(moveRequest);
+			  if (bool == true){
+				  String roomName = p.location();
+				  System.out.println("You have moved into the " + roomName)
+			  }
+			  else{
+				  System.out.println("Yo dum dum, you cant open that/it don't exist");
+			  }
 			  //eventually this will have to increment some kind of turn counter so that MOBs are signaled to also move
 		  }
 		  else if (cmd.equalsIgnoreCase("get")){

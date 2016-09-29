@@ -11,6 +11,10 @@ public class Exit {
 		 this.exitName = s;
 		
 	}
+	/**
+	 * getName() gets the name of the exit we are looking for
+	 * @return exitName
+	 */
 	public String getName(){
 		return exitName;
 	}

@@ -27,16 +27,28 @@ public class Inventory {
 		return i;
 	} return null;
 	}
-	
+	/**
+	 * getItemName checks the room's inventory for desired item
+	 * @param x name of the item
+	 * @return desired item or null if item is not in the room
+	 */
 	public Item getItemName(String x){
 		for(Item i : myInventory){
 			x.equalsIgnoreCase(i.getName());
 			return i;
 		} return null;
 		}
+	/**
+	 * add, puts an item into an array of items
+	 * @param item
+	 */
 	public void add(Item item){
 		myInventory.add(item);
 	}
+	/**
+	 * remove, takes out an item in the array of items
+	 * @param item
+	 */
 	public void remove(Item item){
 		myInventory.remove(item);
 	}

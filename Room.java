@@ -59,7 +59,13 @@ public class Room {
  * creates a description of the room 
  */
 public String description(){
-	return description;
+	String exits = "";
+	for (i = 0; i < exitList.length ; i++){
+		exits = exits +" , "+ exitList[i].getName();
+	}
+	
+	String m = (description + " your exit options are "+ exits);
+	
 }
 
 

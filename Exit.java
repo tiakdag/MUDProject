@@ -13,6 +13,9 @@ public class Exit {
 		 this.exitName = s;
 		
 	}
+	public String getName(){
+		return exitName;
+	}
 	//I dont know what this method is #UMLproblems
 	public void door(){
 		

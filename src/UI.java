@@ -5,7 +5,11 @@ public class UI {
 	private Scanner reader = new Scanner(System.in);
 	private boolean endGame = false;
 	
-  public UI(Player p){
+  /**
+   * UI is a class that constructs a scanner that starts the game 
+   * @param p
+   */
+	public UI(Player p){
 	  System.out.println("Your eyes slide open and a musky stench fills your lungs.");
 	  System.out.println("Welcome to the Swamp, are you new here?");
 	  System.out.println("A raspy voice stings your ears. You whip your head around to find");

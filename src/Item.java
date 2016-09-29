@@ -19,12 +19,18 @@ public class Item {
 		return name;
 	}
 	/**
-	 * pickUpItem takes the item and will add it to the inventory.
-	 * 
-	 * @return a message saying the player has picked up a item 
+	 * getItem checks to see if the name of the object we are getting
+	 * matches and if it does return that name
+	 * @param  x
+	 * @return the item 
 	 */
-	
-
+	public Item getItem(String x){
+		if (x == name){
+			return x();
+		}else return null;
+	}
 	
 	private String name;
 }
+
+

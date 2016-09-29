@@ -1,19 +1,15 @@
 import java.util.ArrayList;
 public class Inventory {
 	
-	ArrayList<Item> myInventory = new ArrayList <Item> (40);
+	ArrayList<Item> myInventory;
 	/**
 	 * Creates an inventory object that contains an array of items 
 	 * @param Item[] x an array of items that are entered from other classes
 	 */
 	
 	//  List<String> list = new ArrayList<String>();
-	public Inventory(Item[] x ){  //or MOB
-		
-		
-		for (int n=0; n <= x.length; n++){
-			myInventory.add(x[n]);
-		}
+	public Inventory(){  //or MOB
+		myInventory = new ArrayList <Item> (40);
 	} 
 /**
  * get the item 
@@ -52,4 +48,12 @@ public class Inventory {
 	public void remove(Item item){
 		myInventory.remove(item);
 	}
+	public String returnItemList(){
+		String items = "";
+		for (int i = 0; i < myInventory.size() ; i++){
+			items = items +", "+ myInventory.get(i).getName();
+		}
+		return items;
+	}
 }
+	

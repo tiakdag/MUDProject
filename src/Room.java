@@ -5,7 +5,7 @@ public class Room {
 	private String name;
 	private String description;
 	ArrayList<Exit>exitList = new ArrayList<Exit> (5);
-	private Inventory I = new Inventory(null);
+	private Inventory I = new Inventory();
 	/**
  * constructs a room object that has a name and can be entered
  * @param x the name of the room that will be entered.
@@ -57,9 +57,10 @@ public String description(){
 	String exits = "";
 	for (int i = 0; i < exitList.size() ; i++){
 		exits = exits +" "+ exitList.get(i).getName();
-	}
+	} 
+	String items = I.returnItemList();
+	String m = (description + " your exit options are "+ exits + "\n The room has " + items );
 	
-	String m = (description + " your exit options are "+ exits);
 	return m;
 }
 

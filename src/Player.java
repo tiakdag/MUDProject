@@ -14,7 +14,7 @@ public class Player {
 	 */
 	public Player() {
 		name = "Scooby";
-		
+		inventory = new Inventory();
 	}
 	/**
 	 * getName() gets the name of the player and returns that name
@@ -52,7 +52,6 @@ public class Player {
 		}
 		else{
 			inventory.add(itemCheck);
-			System.out.println("This is a test line: You have tried to pick up " + itemCheck);
 			return true;
 		}
 	}
@@ -70,7 +69,6 @@ public class Player {
 		else{
 			inventory.remove(itemCheck);// removes item from player inventory
 			room.addItem(itemCheck); //adds item to room inventory
-			System.out.println("This is a test line: You have tried to drop " + itemCheck);
 			return true;
 		}
 		
@@ -82,7 +80,7 @@ public class Player {
 	 * @return true if player went to next room, false if next room doesnt exist
 	 */
 	public boolean moveRooms(String s){
-		Room nextRoom = room.isMoveValid();
+		Room nextRoom = room.isMoveValid(s);
 		if(nextRoom == null){
 			return false;
 		}
@@ -91,7 +89,9 @@ public class Player {
 			return true;
 		}
 	}
-	
+	public String getDescription() {
+		return room.description();
+	}
 	
 	
 	 /*

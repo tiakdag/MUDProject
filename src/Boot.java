@@ -7,9 +7,9 @@ public class Boot {
 	Boot() {
 		//ITEM CREATION
 		
-		Item sub = new Item("Johnny Jim's sub");
+		Item sub = new Item("JohnnyJim'sSub");
 		Item onion = new Item("Onion");
-		Item snack = new Item("Scooby Snack");
+		Item snack = new Item("ScoobySnack");
 		
 		//ROOM CREATION
 		

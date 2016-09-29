@@ -17,6 +17,8 @@ public class UI {
 	  
 	  //This method will keep going until the player types "exit"
 	  while(!endGame){
+		  String y = p.getDescription();
+		  System.out.println(y);
 		  System.out.println("What do you do next?");
 		  System.out.println("Valid cmds: move ___, get__, drop___, lost");
 		  String cmd = reader.next();
@@ -29,7 +31,7 @@ public class UI {
 			  boolean bool = p.moveRooms(moveRequest);
 			  if (bool == true){
 				  String roomName = p.location();
-				  System.out.println("You have moved into the " + roomName)
+				  System.out.println("You have moved into the " + roomName);
 			  }
 			  else{
 				  System.out.println("Yo dum dum, you cant open that/it don't exist");

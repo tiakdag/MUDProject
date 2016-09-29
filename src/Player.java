@@ -75,6 +75,16 @@ public class Player {
 		}
 		
 	}
+	public boolean moveRooms(String s){
+		Exit exitCheck = room.isMoveValid();
+		if(exitCheck == null){
+			return false;
+		}
+		else{
+			setLocation(exitCheck);
+			return true;
+		}
+	}
 	
 	
 	

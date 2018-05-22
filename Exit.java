@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class Exit {
 
 	 private Room nextRoom;
@@ -13,6 +11,10 @@ public class Exit {
 		 this.exitName = s;
 		
 	}
+	/**
+	 * getName() gets the name of the exit we are looking for
+	 * @return exitName
+	 */
 	public String getName(){
 		return exitName;
 	}
@@ -25,15 +27,11 @@ public class Exit {
 		
 	}
 	/**
-	 * exitRoom creates an exit for the room 
-	 * @param Room r
-	 * @param String s
-	 * compare the room we want to go to and the string we pass in for the name of the room
+	 * getNextRoom creates an exit for the room 
+	 * @return the Room object the the exit links too (ie nextRoom)
 	 */
-	public exitRoom(Room r, String s){
-		if (getRoom(r)== s){
-			return r;
-		} else return "error";
+	public Room getNextRoom(){
+		return nextRoom;
 	}
 	/**
 	 * getDoorStatus() checks to see if the door is able to open or not

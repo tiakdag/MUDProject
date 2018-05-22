@@ -11,6 +11,14 @@ public class Inventory {
 	public Inventory(){  //or MOB
 		myInventory = new ArrayList <Item> (40);
 	} 
+	/**
+	 * gets an item at a specific index
+	 * @param x
+	 * @return
+	 */
+	public Item getItemAt(int x){
+		return myInventory.get(x);
+	}
 /**
  * get the item 
  * @param x
@@ -57,9 +65,40 @@ public class Inventory {
 	public String returnItemList(){
 		String items = "";
 		for (int i = 0; i < myInventory.size() ; i++){
-			items = items +", "+ myInventory.get(i).getName();
+			items = items + myInventory.get(i).getName()+", ";
 		}
 		return items;
 	}
+	/**
+	 * gets the length of the array list
+	 * @return
+	 */
+	public int getLength() {
+		return myInventory.size();
+	}
+	/**
+	 * adds up all the offensive values in 
+	 * @return
+	 */
+	public int addOffense(){
+		int offense = 0;
+		for (int i = 0; i < myInventory.size() ; i++){
+			offense = offense + +myInventory.get(i).getOffense();
+		}
+		return offense;
+	}
+	/**
+	 * adds all defense values
+	 * @return
+	 */
+	public int addDefense(){
+		int defense = 0;
+		for (int i = 0; i < myInventory.size() ; i++){
+			defense = defense +  myInventory.get(i).getDefense();
+		}
+		return defense;
+	}
+	 
+	
 }
 	

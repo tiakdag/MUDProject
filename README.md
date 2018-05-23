@@ -1,1 +1,1 @@
-# ShrekIsLove
+This project is a multi-user dungeon game with threads running as the non playable characters.  The goal of the player is to traverse through rooms picking up items and adding the non playable characters to their party.  Once all of the non playable characters have been added to the party, the final boss battle comes.  The final battle takes the statisitcs of how various attack and defence each character and item gives the player.  Some doors are locked and require items to open.  
